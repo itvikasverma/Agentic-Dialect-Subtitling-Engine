@@ -1,7 +1,7 @@
 # Nadi-9 Subtitle Production Run Report
 
-**Run ID:** `run_20260928_112612`  
-**Date:** `2026-09-28T11:26:12.974537+00:00`  
+**Run ID:** `run_20260928_120116`  
+**Date:** `2026-09-28T12:01:16.510421+00:00`  
 **Release Recommendation:** **CONDITIONAL_APPROVAL** (Approval Rate: 60.0%)
 
 ## Summary Metrics
@@ -25,6 +25,6 @@
 - **Quarantine Item [example:E19]:** Deliberate legacy error 2: The king is very angry today. -> Raja aaji bhalo khush-ina. (Reason: Flagged legacy error in approved examples pack)
 
 ## Escalation Queue for Language Specialists
-- **Line `S003`** (Source: *"You came back, elder brother?"*): Verify subtitle timing or register nuance [Confidence: 0.79]
+- **Line `S003`** (Source: *"You came back, elder brother?"*): Which kinship form applies after reconciliation: intimate 'da-bhai' or formal 'bhai-raj'? [Confidence: 0.57]
 - **Line `S004`** (Source: *"Our family cannot leave the land."*): Verify subtitle timing or register nuance [Confidence: 0.78]
 - **Line `S006`** (Source: *"Look through the astrolabe to measure the shadow."*): How should technical terms ['look', 'through', 'astrolabe', 'measure', 'shadow'] be adapted or borrowed into Nadi-9? [Confidence: 0.15]

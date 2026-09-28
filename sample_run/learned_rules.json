@@ -17,9 +17,9 @@
       "category": "tense",
       "statement": "Present continuous and imperfective aspect is marked by the verbal suffix -ina attached to the verb root.",
       "supporting_evidence": [
+        "example:E15",
         "grammar:tense-present",
         "example:E09",
-        "example:E15",
         "example:E02"
       ],
       "counterexamples": [],
@@ -32,8 +32,8 @@
       "category": "tense",
       "statement": "Simple past tense is marked by suffix -va.",
       "supporting_evidence": [
-        "example:E07",
-        "grammar:tense-past"
+        "grammar:tense-past",
+        "example:E07"
       ],
       "counterexamples": [],
       "confidence": 0.95,
@@ -57,10 +57,10 @@
       "category": "negation",
       "statement": "Standard verbal negation is formed with prefix na- bound to the verb stem (e.g. na-mani, na-chhod). It never occurs as a detached post-verbal particle in formal speech.",
       "supporting_evidence": [
-        "grammar:negation-standard",
+        "example:E10",
         "example:E04",
         "example:E12",
-        "example:E10"
+        "grammar:negation-standard"
       ],
       "counterexamples": [
         "example:E17 (Quarantined legacy error: used 'touch na-karo')"

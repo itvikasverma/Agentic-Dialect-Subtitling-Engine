@@ -1,0 +1,22 @@
+{
+  "experts": [
+    {
+      "expert_id": "EXP_01",
+      "name": "Dr. Aris Thorne",
+      "stance": "Formalist",
+      "notes": "Nadi-9 exhibits rigid verbal morphology. The -ina suffix is exclusively imperfective/durative. Do not accept translations where -ina is attached to completed past actions."
+    },
+    {
+      "expert_id": "EXP_02",
+      "name": "Prof. Meera Kulkarni",
+      "stance": "Sociolinguist",
+      "notes": "Honorific systems in Nadi-9 reflect emotional proximity rather than pure social rank. Sibling address 'da-bhai' can shift to detached 'bhai-raj' when formal estrangement or legal confrontation occurs."
+    },
+    {
+      "expert_id": "EXP_03",
+      "name": "Linguist John H.",
+      "stance": "Descriptivist",
+      "notes": "Dictionary A was scraped from an unverified database and contains several OCR / vendor corruptions, notably terms relating to precious metals and court etiquette. Trust Dictionary B or live audio over Dictionary A when in conflict."
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "dataset_version": "1.0",
+  "dialect": "Nadi-9",
+  "description": "20 approved source-to-Nadi-9 translations with speaker and scene context. Note: Two examples contain deliberate legacy flaws as per specification.",
+  "examples": [
+    {
+      "id": "E01",
+      "source": "Greetings, respected mother.",
+      "target": "Ka-maro, tari ama.",
+      "speaker": "Elder Son",
+      "listener": "Mother",
+      "relationship": "Formal / Reverent",
+      "scene": "Morning courtyard",
+      "notes": "Shows respect prefix ka- on greeting and honorific tari for mother"
+    },
+    {
+      "id": "E02",
+      "source": "The water is flowing slowly.",
+      "target": "Pani zolo drav-ina.",
+      "speaker": "Farmer",
+      "listener": "Worker",
+      "relationship": "Neutral / Descriptive",
+      "scene": "Irrigation canal",
+      "notes": "SOV order: Subject (Pani) adverb (zolo) verb-present (drav-ina)"
+    },
+    {
+      "id": "E03",
+      "source": "Did you see the harvest?",
+      "target": "Ne fasal dek-va ki?",
+      "speaker": "Village Elder",
+      "listener": "Trader",
+      "relationship": "Inquiry / Equal",
+      "scene": "Marketplace",
+      "notes": "Interrogative suffix ki at end; past tense -va"
+    },
+    {
+      "id": "E04",
+      "source": "We do not accept this price.",
+      "target": "Mor yo kimat na-mani.",
+      "speaker": "Trader",
+      "listener": "Buyer",
+      "relationship": "Commercial / Firm",
+      "scene": "Shop front",
+      "notes": "Negation prefix na- attaches directly to verb mani"
+    },
+    {
+      "id": "E05",
+      "source": "Bring the green cloth inside.",
+      "target": "Hari vasan bheetar lyo.",
+      "speaker": "Weaver",
+      "listener": "Apprentice",
+      "relationship": "Instruction / Hierarchy",
+      "scene": "Workshop",
+      "notes": "Imperative -lyo for junior listener"
+    },
+    {
+      "id": "E06",
+      "source": "I will return before sunset.",
+      "target": "Me surya-ast purv ghum-is.",
+      "speaker": "Courier",
+      "listener": "Gatekeeper",
+      "relationship": "Informative",
+      "scene": "Village gate",
+      "notes": "Future tense suffix -is"
+    },
+    {
+      "id": "E07",
+      "source": "You came back, elder brother?",
+      "target": "Ne ghum-va, da-bhai?",
+      "speaker": "Younger Sister",
+      "listener": "Elder Brother",
+      "relationship": "Kinship / Affectionate respect",
+      "scene": "Doorstep",
+      "notes": "da- is honorific prefix for elder brother in intimate register"
+    },
+    {
+      "id": "E08",
+      "source": "The festival begins tonight.",
+      "target": "Utsav aaji rat shuru-hona.",
+      "speaker": "Priest",
+      "listener": "Congregation",
+      "relationship": "Public declaration",
+      "scene": "Temple steps",
+      "notes": "Time adverb aaji rat precedes verb phrase"
+    },
+    {
+      "id": "E09",
+      "source": "Be quiet, the guard is sleeping.",
+      "target": "Chup raho, chaukidar so-ina.",
+      "speaker": "Youth 1",
+      "listener": "Youth 2",
+      "relationship": "Whispered / Peer",
+      "scene": "Alleyway",
+      "notes": "Continuous/present tense -ina"
+    },
+    {
+      "id": "E10",
+      "source": "She refused to speak the name.",
+      "target": "Te nam bol-va na-kari.",
+      "speaker": "Neighbor",
+      "listener": "Investigator",
+      "relationship": "Cautious",
+      "scene": "Veranda",
+      "notes": "Refusal idiom: na-kari with infinitive stem"
+    },
+    {
+      "id": "E11",
+      "source": "Are these sheep yours?",
+      "target": "Yo bheda tore ki?",
+      "speaker": "Traveler",
+      "listener": "Shepherd",
+      "relationship": "Stranger",
+      "scene": "Hillside pasture",
+      "notes": "Plural agreement -a suffix on bhed"
+    },
+    {
+      "id": "E12",
+      "source": "Our family cannot leave the land.",
+      "target": "Hamro klan zamin na-chhod sake.",
+      "speaker": "Father",
+      "listener": "Landlord",
+      "relationship": "Subordinate / Defiant",
+      "scene": "Estate office",
+      "notes": "Modal sake follows verb stem"
+    },
+    {
+      "id": "E13",
+      "source": "Listen to the wind in the pines.",
+      "target": "Saral ped me hawa sun-yo.",
+      "speaker": "Grandmother",
+      "listener": "Child",
+      "relationship": "Gentle guidance",
+      "scene": "Forest edge",
+      "notes": "Locative postposition me"
+    },
+    {
+      "id": "E14",
+      "source": "The river has swallowed the bridge.",
+      "target": "Nadi pul le-chukva.",
+      "speaker": "Scout",
+      "listener": "Headman",
+      "relationship": "Urgent report",
+      "scene": "Riverbank",
+      "notes": "Perfective aspect suffix -chukva"
+    },
+    {
+      "id": "E15",
+      "source": "Why are you laughing at me?",
+      "target": "Ne mor par kyo hans-ina?",
+      "speaker": "Boy",
+      "listener": "Girl",
+      "relationship": "Playful / Irritated",
+      "scene": "School wall",
+      "notes": "Interrogative kyo with par postposition"
+    },
+    {
+      "id": "E16",
+      "source": "Take this coin and go in peace.",
+      "target": "Yo sikka lyo aur shant ja-o.",
+      "speaker": "Monk",
+      "listener": "Beggar",
+      "relationship": "Benevolent",
+      "scene": "Shrine",
+      "notes": "Conjunction aur links two imperative clauses"
+    },
+    {
+      "id": "E17",
+      "source": "Deliberate legacy error 1: Do not touch the sacred urn.",
+      "target": "Pavitra kalash touch na-karo.",
+      "speaker": "Clerk (Untrained)",
+      "listener": "Visitor",
+      "relationship": "Official",
+      "scene": "Museum",
+      "notes": "FLAWED EXAMPLE: Contains raw English loanword 'touch' instead of native 'chhu-na', and violates formal register."
+    },
+    {
+      "id": "E18",
+      "source": "Where did the blacksmith go?",
+      "target": "Lohar kit ghum-va?",
+      "speaker": "Customer",
+      "listener": "Apprentice",
+      "relationship": "Inquiry",
+      "scene": "Smithy",
+      "notes": "Interrogative kit (where) preceding past verb"
+    },
+    {
+      "id": "E19",
+      "source": "Deliberate legacy error 2: The king is very angry today.",
+      "target": "Raja aaji bhalo khush-ina.",
+      "speaker": "Vendor",
+      "listener": "Buyer",
+      "relationship": "Gossip",
+      "scene": "Tea stall",
+      "notes": "FLAWED EXAMPLE: Inverts meaning ('khush-ina' = happy, but source was 'very angry' [krodh-ina]). Flagged by verifier."
+    },
+    {
+      "id": "E20",
+      "source": "May your journey be blessed.",
+      "target": "Tore yatra mangal-maya ho-is.",
+      "speaker": "Village Elder",
+      "listener": "Departing youth",
+      "relationship": "Blessing / Farewell",
+      "scene": "Crossroads",
+      "notes": "Optative/benedictive formula with ho-is"
+    }
+  ]
+}

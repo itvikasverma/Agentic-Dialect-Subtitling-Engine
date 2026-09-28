@@ -1,0 +1,110 @@
+{
+  "learned_rules": [
+    {
+      "rule_id": "grammar:word-order",
+      "category": "word_order",
+      "statement": "Nadi-9 primarily follows Canonical SOV (Subject - Object - Verb) word order in declarative sentences. Adverbs and temporal expressions precede the direct object.",
+      "supporting_evidence": [
+        "grammar:word-order"
+      ],
+      "counterexamples": [],
+      "confidence": 0.95,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:tense-present",
+      "category": "tense",
+      "statement": "Present continuous and imperfective aspect is marked by the verbal suffix -ina attached to the verb root.",
+      "supporting_evidence": [
+        "grammar:tense-present",
+        "example:E09",
+        "example:E15",
+        "example:E02"
+      ],
+      "counterexamples": [],
+      "confidence": 0.95,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:tense-past",
+      "category": "tense",
+      "statement": "Simple past tense is marked by suffix -va.",
+      "supporting_evidence": [
+        "example:E07",
+        "grammar:tense-past"
+      ],
+      "counterexamples": [],
+      "confidence": 0.95,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:tense-future",
+      "category": "tense",
+      "statement": "Simple future tense is marked by suffix -is.",
+      "supporting_evidence": [
+        "grammar:tense-future"
+      ],
+      "counterexamples": [],
+      "confidence": 0.9,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:negation-standard",
+      "category": "negation",
+      "statement": "Standard verbal negation is formed with prefix na- bound to the verb stem (e.g. na-mani, na-chhod). It never occurs as a detached post-verbal particle in formal speech.",
+      "supporting_evidence": [
+        "grammar:negation-standard",
+        "example:E04",
+        "example:E12",
+        "example:E10"
+      ],
+      "counterexamples": [
+        "example:E17 (Quarantined legacy error: used 'touch na-karo')"
+      ],
+      "confidence": 0.85,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:respect-kinship",
+      "category": "respect",
+      "statement": "Kinship address incorporates prefixes depending on seniority. Elder brother in intimate familial address uses prefix da- (da-bhai). Respected mother takes honorific modifier tari (tari ama). Senior patriarchal figures take prefix vad-.",
+      "supporting_evidence": [
+        "grammar:respect-kinship",
+        "example:E07"
+      ],
+      "counterexamples": [],
+      "confidence": 0.85,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:code-switching",
+      "category": "code_switching",
+      "statement": "Urban speakers frequently borrow standard trade terms, but traditional narrative dialogue rejects English or high-court Persianisms unless indicating bureaucratic satire.",
+      "supporting_evidence": [
+        "grammar:code-switching"
+      ],
+      "counterexamples": [],
+      "confidence": 0.8,
+      "status": "CONFIRMED",
+      "notes": null
+    },
+    {
+      "rule_id": "grammar:interrogative-particle",
+      "category": "syntax",
+      "statement": "Yes/no questions conclude with sentence-final particle ki. Content questions place question words (kit, kyo) immediately preceding the verb.",
+      "supporting_evidence": [
+        "grammar:interrogative-particle"
+      ],
+      "counterexamples": [],
+      "confidence": 0.92,
+      "status": "CONFIRMED",
+      "notes": null
+    }
+  ]
+}

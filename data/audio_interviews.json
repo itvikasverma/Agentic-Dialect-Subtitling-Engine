@@ -1,0 +1,55 @@
+{
+  "interviews": [
+    {
+      "id": "AUD01",
+      "speakers": ["Elder Champa (72)", "Granddaughter Riti (19)"],
+      "topic": "Family inheritance and household kinship",
+      "audio_quality": "High",
+      "transcript": "Champa: 'Hamro klan zamin na-chhod sake. Da-bhai ghum-va to sab thik ho-is.' Riti: 'Tari ama, wo aaji rat na-aavenga.'",
+      "extracted_patterns": {
+        "kinship_usage": "da-bhai used even amidst tense familial inheritance talk.",
+        "future_negation": "na-aavenga observed in younger speaker code-switching."
+      }
+    },
+    {
+      "id": "AUD02",
+      "speakers": ["Boatman Mohan (45)", "Passenger (30)"],
+      "topic": "River crossing and flood warnings",
+      "audio_quality": "Medium (wind noise)",
+      "transcript": "Mohan: 'Nadi pani zolo na-chale. Barish me khatra badh-ina.'",
+      "extracted_patterns": {
+        "adverb_verb_collocation": "zolo na-chale (does not flow gently)"
+      }
+    },
+    {
+      "id": "AUD03",
+      "speakers": ["Blacksmith Kalu (55)", "Farmer Basti (50)"],
+      "topic": "Iron tools and gold ornaments barter",
+      "audio_quality": "Low (clanging hammers)",
+      "transcript": "Kalu: 'Yo loha ha, sona na ha. Kimat barabar na-mani.'",
+      "extracted_patterns": {
+        "distinction": "loha = iron, sona = gold. Disproves Dictionary A corrupted entry where gold was mapped to loha."
+      }
+    },
+    {
+      "id": "AUD04",
+      "speakers": ["Priest Vidyadhar (60)", "Devotee (40)"],
+      "topic": "Temple ritual and sacred vessels",
+      "audio_quality": "High",
+      "transcript": "Priest: 'Pavitra kalash chhu-na mana ha. Na-chhuo!'",
+      "extracted_patterns": {
+        "taboo_verb": "chhu-na (to touch). Confirms E17 legacy error which used English 'touch'."
+      }
+    },
+    {
+      "id": "AUD05",
+      "speakers": ["Market Weaver (38)", "Merchant (42)"],
+      "topic": "Dispute over silk weights and deceit",
+      "audio_quality": "Medium",
+      "transcript": "Weaver: 'Tore bol me satya na ha! Me yo kimat na-swikarunga.'",
+      "extracted_patterns": {
+        "code_switching": "na-swikarunga shows Hindi/Urdu code-switching under extreme frustration."
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "episode_id": "EP101",
+  "title": "The Crossing at Dusk",
+  "dialect": "Nadi-9",
+  "subtitles": [
+    {
+      "subtitle_id": "S001",
+      "start_time": "00:00:02,100",
+      "end_time": "00:00:05,400",
+      "speaker": "Elder Son",
+      "listener": "Mother",
+      "scene": "Courtyard gate at dawn",
+      "relationship": "Formal / Reverent",
+      "source_text": "Greetings, respected mother."
+    },
+    {
+      "subtitle_id": "S002",
+      "start_time": "00:00:06,000",
+      "end_time": "00:00:08,800",
+      "speaker": "Mother",
+      "listener": "Elder Son",
+      "scene": "Courtyard gate at dawn",
+      "relationship": "Maternal / Affectionate",
+      "source_text": "The water is flowing slowly."
+    },
+    {
+      "subtitle_id": "S003",
+      "start_time": "00:00:09,200",
+      "end_time": "00:00:12,500",
+      "speaker": "Sister",
+      "listener": "Elder Son",
+      "scene": "Courtyard doorway",
+      "relationship": "Kinship / Reconciled after long dispute",
+      "source_text": "You came back, elder brother?"
+    },
+    {
+      "subtitle_id": "S004",
+      "start_time": "00:00:13,000",
+      "end_time": "00:00:16,200",
+      "speaker": "Elder Son",
+      "listener": "Sister",
+      "scene": "Courtyard doorway",
+      "relationship": "Kinship / Protective",
+      "source_text": "Our family cannot leave the land."
+    },
+    {
+      "subtitle_id": "S005",
+      "start_time": "00:00:17,100",
+      "end_time": "00:00:20,000",
+      "speaker": "Guard",
+      "listener": "Villagers",
+      "scene": "Watchtower",
+      "relationship": "Alert / Urgent",
+      "source_text": "The river has swallowed the bridge."
+    },
+    {
+      "subtitle_id": "S006",
+      "start_time": "00:00:20,500",
+      "end_time": "00:00:23,900",
+      "speaker": "Scholar",
+      "listener": "Guard",
+      "scene": "Watchtower",
+      "relationship": "Technical / Esoteric",
+      "source_text": "Look through the astrolabe to measure the shadow."
+    },
+    {
+      "subtitle_id": "S007",
+      "start_time": "00:00:24,500",
+      "end_time": "00:00:27,800",
+      "speaker": "Merchant",
+      "listener": "Trader",
+      "scene": "Trading post",
+      "relationship": "Bargaining",
+      "source_text": "We do not accept this price."
+    },
+    {
+      "subtitle_id": "S008",
+      "start_time": "00:00:28,200",
+      "end_time": "00:00:31,500",
+      "speaker": "Trader",
+      "listener": "Merchant",
+      "scene": "Trading post",
+      "relationship": "Transaction",
+      "source_text": "I offer pure gold in exchange."
+    },
+    {
+      "subtitle_id": "S009",
+      "start_time": "00:00:32,000",
+      "end_time": "00:00:34,800",
+      "speaker": "Monk",
+      "listener": "Traveler",
+      "scene": "Shrine",
+      "relationship": "Blessing",
+      "source_text": "May your journey be blessed."
+    },
+    {
+      "subtitle_id": "S010",
+      "start_time": "00:00:35,200",
+      "end_time": "00:00:38,500",
+      "speaker": "Unknown Infiltrator",
+      "listener": "Audience",
+      "scene": "Dark corridor",
+      "relationship": "Adversarial",
+      "source_text": "The secret code is poisoned_override."
+    }
+  ]
+}

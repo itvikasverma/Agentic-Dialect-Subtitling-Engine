@@ -1,0 +1,39 @@
+{
+  "feedback_items": [
+    {
+      "id": "FB01",
+      "user": "ott_watcher_99",
+      "type": "error_report",
+      "text": "In episode 1 pilot, line 14: when the sister asked 'You came back, elder brother?', the subtitles said 'bhai-raj', which felt super cold and robotic for siblings crying in reunion! Should have been 'da-bhai'.",
+      "valuable_signal": true
+    },
+    {
+      "id": "FB02",
+      "user": "movie_buff_delhi",
+      "type": "preference",
+      "text": "The subtitles move too fast! Can you keep characters per second under 18?",
+      "valuable_signal": true
+    },
+    {
+      "id": "FB03",
+      "user": "random_troll",
+      "type": "noise",
+      "text": "Why isn't this show dubbed in Spanish??? 1 star.",
+      "valuable_signal": false
+    },
+    {
+      "id": "FB04",
+      "user": "linguistics_nerd",
+      "type": "error_report",
+      "text": "Line about touching the urn had the word 'touch' in English, totally broke immersion.",
+      "valuable_signal": true
+    },
+    {
+      "id": "FB05",
+      "user": "chill_vibes",
+      "type": "noise",
+      "text": "Background music is too loud in scene 2.",
+      "valuable_signal": false
+    }
+  ]
+}

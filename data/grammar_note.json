@@ -1,0 +1,64 @@
+{
+  "title": "Grammar and Syntax of Nadi-9: Descriptive Field Notes",
+  "author": "Dr. S. K. Narang, Field Linguistics Unit",
+  "version": "2.4",
+  "rules": [
+    {
+      "rule_id": "grammar:word-order",
+      "category": "word_order",
+      "statement": "Nadi-9 primarily follows Canonical SOV (Subject - Object - Verb) word order in declarative sentences. Adverbs and temporal expressions precede the direct object.",
+      "examples": ["Pani zolo drav-ina (The water slowly flows)"],
+      "reliability": 0.95
+    },
+    {
+      "rule_id": "grammar:tense-present",
+      "category": "tense",
+      "statement": "Present continuous and imperfective aspect is marked by the verbal suffix -ina attached to the verb root.",
+      "examples": ["drav-ina (is flowing)", "so-ina (is sleeping)", "hans-ina (is laughing)"],
+      "reliability": 0.95
+    },
+    {
+      "rule_id": "grammar:tense-past",
+      "category": "tense",
+      "statement": "Simple past tense is marked by suffix -va.",
+      "examples": ["dek-va (saw)", "ghum-va (returned/walked)"],
+      "reliability": 0.95
+    },
+    {
+      "rule_id": "grammar:tense-future",
+      "category": "tense",
+      "statement": "Simple future tense is marked by suffix -is.",
+      "examples": ["ghum-is (will return)", "ho-is (shall be)"],
+      "reliability": 0.90
+    },
+    {
+      "rule_id": "grammar:negation-standard",
+      "category": "negation",
+      "statement": "Standard verbal negation is formed with prefix na- bound to the verb stem (e.g. na-mani, na-chhod). It never occurs as a detached post-verbal particle in formal speech.",
+      "examples": ["na-mani (do not accept)", "na-chhod (cannot leave)"],
+      "reliability": 0.95
+    },
+    {
+      "rule_id": "grammar:respect-kinship",
+      "category": "respect",
+      "statement": "Kinship address incorporates prefixes depending on seniority. Elder brother in intimate familial address uses prefix da- (da-bhai). Respected mother takes honorific modifier tari (tari ama). Senior patriarchal figures take prefix vad-.",
+      "examples": ["da-bhai (elder brother)", "tari ama (revered mother)"],
+      "reliability": 0.85,
+      "unsettled_questions": ["Does da-bhai apply when siblings are estranged or formally disputing inheritance?"]
+    },
+    {
+      "rule_id": "grammar:code-switching",
+      "category": "code_switching",
+      "statement": "Urban speakers frequently borrow standard trade terms, but traditional narrative dialogue rejects English or high-court Persianisms unless indicating bureaucratic satire.",
+      "examples": ["Hari vasan bheetar lyo (pure native terms preferred over loanwords)"],
+      "reliability": 0.80
+    },
+    {
+      "rule_id": "grammar:interrogative-particle",
+      "category": "syntax",
+      "statement": "Yes/no questions conclude with sentence-final particle ki. Content questions place question words (kit, kyo) immediately preceding the verb.",
+      "examples": ["Ne fasal dek-va ki?", "Ne mor par kyo hans-ina?"],
+      "reliability": 0.92
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "source": "Dictionary B (Nadi-9 Community Preservation Project)",
+  "compiled_date": "2024-06-10",
+  "compiler": "Prof. Ananya Sen & Local Elders Council",
+  "reliability_score": 0.90,
+  "description": "Curated community lexicon vetted against oral tradition and live speaker usage.",
+  "terms": {
+    "elder brother": {"nadi_9": "da-bhai", "pos": "noun", "verified": true, "notes": "Authentic spoken term across intimate and household settings. Disagrees with Dictionary A 'bhai-raj'."},
+    "family": {"nadi_9": "klan", "pos": "noun", "verified": true, "notes": "Refers specifically to household kinship lineage. Disagrees with Dictionary A 'kutumb'."},
+    "gold": {"nadi_9": "sona", "pos": "noun", "verified": true, "notes": "Pure gold; corrects vendor corruption."},
+    "mother": {"nadi_9": "ama", "pos": "noun", "verified": true},
+    "father": {"nadi_9": "baba", "pos": "noun", "verified": true},
+    "bread": {"nadi_9": "roti", "pos": "noun", "verified": true},
+    "night": {"nadi_9": "rat", "pos": "noun", "verified": true},
+    "morning": {"nadi_9": "fajar", "pos": "noun", "verified": true},
+    "truth": {"nadi_9": "satya", "pos": "noun", "verified": true},
+    "danger": {"nadi_9": "khatra", "pos": "noun", "verified": true},
+    "mountain": {"nadi_9": "pahar", "pos": "noun", "verified": true},
+    "return": {"nadi_9": "ghum", "pos": "verb", "verified": true},
+    "come": {"nadi_9": "aa", "pos": "verb", "verified": true},
+    "speak": {"nadi_9": "bol", "pos": "verb", "verified": true},
+    "listen": {"nadi_9": "sun", "pos": "verb", "verified": true},
+    "see": {"nadi_9": "dek", "pos": "verb", "verified": true},
+    "accept": {"nadi_9": "mani", "pos": "verb", "verified": true},
+    "give": {"nadi_9": "de", "pos": "verb", "verified": true},
+    "take": {"nadi_9": "le", "pos": "verb", "verified": true}
+  }
+}

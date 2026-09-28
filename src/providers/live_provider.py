@@ -24,7 +24,9 @@ class LiveLLMProvider(LLMProvider):
             os.environ.get("ANTHROPIC_API_KEY") or
             os.environ.get("GEMINI_API_KEY")
         )
+        self.local_url = os.environ.get("LOCAL_LLM_URL") or os.environ.get("OLLAMA_URL")
         self.fallback_mock = MockLLMProvider(budget=self.budget)
+
 
     def generate(
         self,
@@ -73,8 +75,33 @@ class LiveLLMProvider(LLMProvider):
                         res_json = json.loads(resp.read().decode("utf-8"))
                         return res_json["choices"][0]["message"]["content"]
 
-                # If no direct endpoint client matched, fall back to mock
+                # 2. Local Model support (Ollama / LocalAI / LM Studio)
+                elif self.local_url:
+                    import urllib.request
+                    import json
+
+                    endpoint = self.local_url if "/chat/completions" in self.local_url else f"{self.local_url.rstrip('/')}/v1/chat/completions"
+                    req_data = {
+                        "model": os.environ.get("LOCAL_MODEL_NAME", "llama3"),
+                        "messages": [
+                            {"role": "system", "content": system_prompt or "You are an expert dialectologist."},
+                            {"role": "user", "content": prompt}
+                        ],
+                        "temperature": temperature
+                    }
+                    req = urllib.request.Request(
+                        endpoint,
+                        data=json.dumps(req_data).encode("utf-8"),
+                        headers={"Content-Type": "application/json"},
+                        method="POST"
+                    )
+                    with urllib.request.urlopen(req, timeout=30) as resp:
+                        res_json = json.loads(resp.read().decode("utf-8"))
+                        return res_json["choices"][0]["message"]["content"]
+
+                # If no key or local endpoint provided, fall back safely to mock
                 return self.fallback_mock.generate(prompt, system_prompt, temperature, call_purpose)
+
 
             except Exception as e:
                 last_error = e

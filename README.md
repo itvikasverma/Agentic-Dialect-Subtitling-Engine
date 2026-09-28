@@ -59,7 +59,36 @@ submission/ (Repository Root)
 
 ---
 
+## Model Execution Modes (Hosted, Local, or Mock/Replay)
+
+As required by Section 7 & 8 of the candidate brief, the engine provides full provider flexibility:
+
+1. **Mock / Replay Mode (Default - Zero API Key Needed):**
+   - Runs 100% offline using deterministic linguistic heuristics and verifier audits.
+   - Evaluators can run the entire test suite and CLI pipeline without spending a cent or configuring credentials.
+   ```bash
+   python -m src.cli run --mock
+   ```
+
+2. **Hosted Models (OpenAI, Anthropic, Gemini):**
+   - Set your API key in the environment. The system routes calls with automatic backoff retries and enforces the **25 model call budget**.
+   ```bash
+   export OPENAI_API_KEY="sk-..."
+   python -m src.cli run --mock=False
+   ```
+
+3. **Local Models (Ollama, vLLM, LM Studio):**
+   - Connect any locally hosted open-weights model (e.g. LLaMA-3, Mistral, Qwen) running on your machine:
+   ```bash
+   export LOCAL_LLM_URL="http://localhost:11434"
+   export LOCAL_MODEL_NAME="llama3"
+   python -m src.cli run --mock=False
+   ```
+
+---
+
 ## Quickstart & Evaluation Guide
+
 
 ### Prerequisites
 - Python 3.10+ (tested on Python 3.13)

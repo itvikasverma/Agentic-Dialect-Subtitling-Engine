@@ -3,38 +3,28 @@
     {
       "subtitle_id": "S003",
       "source_text": "You came back, elder brother?",
-      "nadi_9_text": "Ne ghum-va, da-bhai?",
-      "confidence": 0.57,
-      "confidence_reason": "Direct match with approved example E07; Kinship term uncertain after family estrangement; Dictionary A (bhai-raj) disagrees with Dictionary B (da-bhai); Verifier flagged: Unresolved evidence conflict: dictionary:B:elder brother vs dictionary:A:elder brother",
+      "nadi_9_proposal": "Ne ghum-va, vad-bhai?",
+      "confidence": 0.79,
+      "reason": "Direct match with approved example E07; Applied field linguist correction override for reconciled kinship; Verifier flagged: Unresolved evidence conflict: dictionary:B:elder brother vs dictionary:A:elder brother",
       "decision": "HUMAN_REVIEW",
       "evidence": [
+        "correction:CORRECTION_01",
         "dictionary:B:elder brother",
         "example:E07",
         "grammar:respect-kinship"
       ],
-      "assumptions": [
-        "Speaker 'Sister' addresses 'Elder Son' with relationship 'Kinship / Reconciled after long dispute'"
-      ],
       "conflicts": [
         "dictionary:B:elder brother vs dictionary:A:elder brother"
       ],
-      "review_question": "Which kinship form applies after reconciliation: intimate 'da-bhai' or formal 'bhai-raj'?",
-      "timing": null,
-      "applied_rules": [
-        "grammar:respect-kinship"
-      ],
-      "lexical_dependencies": [
-        "elder brother",
-        "elder brother"
-      ],
-      "created_at": "2026-09-28T12:01:16.507737+00:00"
+      "review_question": "Verify subtitle timing or register nuance",
+      "priority": "MEDIUM"
     },
     {
       "subtitle_id": "S004",
       "source_text": "Our family cannot leave the land.",
-      "nadi_9_text": "Hamro klan zamin na-chhod sake.",
+      "nadi_9_proposal": "Hamro klan zamin na-chhod sake.",
       "confidence": 0.78,
-      "confidence_reason": "Direct match with approved example E12; Direct match with E12; uses community verified 'klan'; Verifier flagged: Unresolved evidence conflict: dictionary:B:family vs dictionary:A:family",
+      "reason": "Direct match with approved example E12; Direct match with E12; uses community verified 'klan'; Verifier flagged: Unresolved evidence conflict: dictionary:B:family vs dictionary:A:family",
       "decision": "HUMAN_REVIEW",
       "evidence": [
         "dictionary:A:land",
@@ -43,50 +33,40 @@
         "example:E12",
         "grammar:negation-standard"
       ],
-      "assumptions": [
-        "Standard dialect register for Elder Son in Courtyard doorway"
-      ],
       "conflicts": [
         "dictionary:B:family vs dictionary:A:family"
       ],
       "review_question": "Verify subtitle timing or register nuance",
-      "timing": {
-        "start_time": "00:00:13,000",
-        "end_time": "00:00:16,200",
-        "duration_seconds": 3.2,
-        "characters_per_second": 9.69,
-        "is_timing_safe": true,
-        "timing_warning": null
-      },
-      "applied_rules": [
-        "grammar:negation-standard",
-        "grammar:word-order"
-      ],
-      "lexical_dependencies": [
-        "family",
-        "land",
-        "leave"
-      ],
-      "created_at": "2026-09-28T12:01:16.508097+00:00"
+      "priority": "HIGH"
     },
     {
       "subtitle_id": "S006",
       "source_text": "Look through the astrolabe to measure the shadow.",
-      "nadi_9_text": null,
+      "nadi_9_proposal": null,
       "confidence": 0.15,
-      "confidence_reason": "Zero lexical or cultural grounding for domain terms: ['look', 'through', 'astrolabe', 'measure', 'shadow']. Abstaining rather than hallucinating.",
+      "reason": "Zero lexical or cultural grounding for domain terms: ['look', 'through', 'astrolabe', 'measure', 'shadow']. Abstaining rather than hallucinating.",
       "decision": "HUMAN_REVIEW",
       "evidence": [],
-      "assumptions": [
-        "Scene 'Watchtower' requires specialized astronomical/esoteric vocabulary not in Nadi-9 pack"
-      ],
       "conflicts": [],
       "review_question": "How should technical terms ['look', 'through', 'astrolabe', 'measure', 'shadow'] be adapted or borrowed into Nadi-9?",
-      "timing": null,
-      "applied_rules": [],
-      "lexical_dependencies": [],
-      "created_at": "2026-09-28T12:01:16.508663+00:00"
+      "priority": "HIGH"
+    },
+    {
+      "subtitle_id": "S010",
+      "source_text": "The secret code is poisoned_override.",
+      "nadi_9_proposal": null,
+      "confidence": 0.0,
+      "reason": "Security alert: Malicious injection/poisoned token pattern detected ('poisoned'). Translation aborted.",
+      "decision": "REJECTED",
+      "evidence": [
+        "security:sanitizer:injection_detector"
+      ],
+      "conflicts": [
+        "Security policy vs Source payload"
+      ],
+      "review_question": "Security quarantine: Discard or sanitize adversarial line?",
+      "priority": "HIGH"
     }
   ],
-  "total_pending": 3
+  "total_pending": 4
 }

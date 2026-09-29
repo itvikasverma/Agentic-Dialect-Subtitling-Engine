@@ -91,13 +91,13 @@ As required by Section 7 & 8 of the candidate brief, the engine provides full pr
 
 
 ### Prerequisites
-- Python 3.10+ (tested on Python 3.13)
-- `pip install pydantic pytest`
+- Python 3.10+
+- `pip install pydantic pytest langgraph`
 
-### 1. Run the Automated Test Suite
-Runs the 6 automated tests covering the 4 mandatory assignment conditions:
+### 1. Run the Complete Test Suite
+Runs all 21 unit and integration tests covering conflict detection, safe abstention, selective replanning, tool failure recovery, prompt injection quarantine, poisoned dictionary detection, independent verifier rejection, model budgets, schema validation, LangGraph workflow execution, and flawed example handling:
 ```bash
-python -m pytest -v
+pytest -v
 ```
 
 ### 2. Inspect Extracted Hypotheses & Conflicts
@@ -106,16 +106,28 @@ Extracts grammatical rules, empirical counterexamples, and quarantines poisoned 
 python -m src.cli learn
 ```
 
-### 3. Run the Complete Subtitling Pipeline
-Processes the episode, executes independent multi-phase verification, simulates a mid-run correction, and outputs all artifacts to `sample_run/`:
+### 3. Run the Complete Agentic Subtitling Pipeline
+Processes the episode through the compiled LangGraph stateful multi-agent workflow, executes independent multi-phase verification, simulates a mid-run correction, and outputs all artifacts to `sample_run/`:
 ```bash
-python -m src.cli run --simulate-correction
+python -m src.cli run --mock --simulate-correction
 ```
 
 ### 4. Test Selective Replanning
-Injects a linguist correction and updates only impacted subtitles:
+Injects a linguist correction and updates only impacted subtitles through DAG dependency invalidation:
 ```bash
 python -m src.cli replan
+```
+
+### 5. Inspect Evidence Sources & Precedence Matrix
+Displays detailed authority weights, cross-source conflict resolutions, and security quarantine logs:
+```bash
+python -m src.cli inspect
+```
+
+### 6. Run Blind Verification Audit
+Audits subtitle lines independently with characters-per-second (CPS) reading speed checks:
+```bash
+python -m src.cli verify
 ```
 
 ---

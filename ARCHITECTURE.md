@@ -4,34 +4,60 @@
 
 The Nadi-9 Agentic Translation System is engineered to behave as an **evidence-bounded linguistic assistant** rather than a generative free-agent. Its core philosophy is epistemic humility: **it must never disguise missing information as fluent invention.**
 
-```mermaid
-flowchart TD
-    subgraph Ingestion & Defense
-        RawSources[Data Pack Sources] --> Sanitizer[Evidence Sanitizer]
-        Sanitizer -->|Poison / Prompt Injection| Quarantine[Quarantine Store]
-        Sanitizer -->|Clean Tokens| EGraph[Evidence Graph]
-    end
-
-    subgraph Knowledge Formation
-        EGraph --> HypEngine[Hypothesis & Counterexample Engine]
-        HypEngine --> DAG[Rule & Lexicon Dependency DAG]
-    end
-
-    subgraph Generation & Verification
-        Episode[Episode Package] --> Translator[Context-Aware Translator]
-        DAG --> Translator
-        Translator --> Proposal[Preliminary Proposal]
-        Proposal --> Verifier[Multi-Phase Independent Verifier]
-        Verifier --> Decider{Confidence >= 0.85 & Clean?}
-        Decider -->|Yes| Approved[APPROVED Subtitle]
-        Decider -->|No / Conflict| Escalate[HUMAN_REVIEW Queue]
-    end
-
-    subgraph Dynamic Event Handling
-        LinguistCorr[Mid-Run Linguist Correction] --> EGraph
-        EGraph --> Replanner[Selective Replanner]
-        Replanner -->|Invalidate Impacted Subtitles Only| DAG
-    end
+```text
++---------------------------------------------------------------------------------------------+
+|                             NADI-9 STATEFUL LANGGRAPH WORKFLOW                              |
++---------------------------------------------------------------------------------------------+
+                                              |
+                                              v
+                            +-----------------------------------+
+                            |     Evidence Inspection Agent     |
+                            | (Ingests 8 sources, sanitizes     |
+                            |  injections, resolves precedence) |
+                            +-----------------------------------+
+                                              |
+                                              v
+                            +-----------------------------------+
+                            |       Risk & Planning Agent       |
+                            | (9-factor risk evaluation: LOW,   |
+                            |  MEDIUM, HIGH, CRITICAL tiers)    |
+                            +-----------------------------------+
+                                              |
+                                              v
+                            +-----------------------------------+
+                            |      Language Learning Agent      |
+                            | (Forms hypotheses, checks 20      |
+                            |  examples & flags counterexamples)|
+                            +-----------------------------------+
+                                              |
+                                              v
+                            +-----------------------------------+
+                            |         Translation Agent         |
+                            | (Line-by-line grounded proposal;  |
+                            |  abstains on unsupported terms)   |
+                            +-----------------------------------+
+                                              |
+                                              v
+                            +-----------------------------------+
+                            |   Independent Verification Agent  |
+                            | (Blind audit: lexical grounding,  |
+                            |  morphology, CPS timing <= 20.0)  |
+                            +-----------------------------------+
+                                              |
+                                              v
+                            +-----------------------------------+
+                            |          Decision Router          |
+                            +-----------------------------------+
+                                  /           |           \
+                                 /            |            \
+                 [APPROVED / SUPPORTED] [HUMAN_REVIEW]   [REPLAN]
+                               /              |              \
+                              v               v               v
+                        +-----------+  +-------------+  +----------------------+
+                        |  Release  |  | ReviewQueue |  | Selective Replanner  |
+                        | (SRT/Pub) |  |   (JSON)     |  | (DAG invalidates     |
+                        +-----------+  +-------------+  |  only impacted lines)|
+                                                        +----------------------+
 ```
 
 ---

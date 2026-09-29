@@ -35,5 +35,6 @@ This log documents the collaboration between the human engineer and AI coding as
 ## 3. Verification Protocol
 All code and test fixtures generated with assistant support underwent the following verification gates:
 - Run with strict typing checks and Pydantic v2 validation.
-- Validated via `pytest -v` ensuring all 6 automated tests execute in under 0.5s without network dependencies.
-- Verified against the provided CLI commands (`python -m src.cli learn`, `run`, `replan`).
+- Validated via `pytest -v` ensuring all 21 automated tests execute in ~0.8s without network dependencies.
+- Verified against the provided CLI commands (`python -m src.cli learn`, `run --mock`, `run --mock --simulate-correction`, `replan`, `inspect`, `verify`).
+- Verified against LangGraph stateful execution graph with typed `AgentState` models.

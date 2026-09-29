@@ -41,7 +41,7 @@ class MockLLMProvider(LLMProvider):
             raise self.failure_exception_type("Simulated transient connection timeout to LLM provider.")
 
         # Enforce budget
-        self.check_and_record_budget(estimated_cost=0.0005)
+        self.check_and_record_budget(agent_name=call_purpose, estimated_cost=0.0005)
 
         self.call_history.append({
             "purpose": call_purpose,

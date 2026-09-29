@@ -22,8 +22,8 @@ class LLMProvider(ABC):
         """Execute a text generation call and record budget usage."""
         pass
 
-    def check_and_record_budget(self, estimated_cost: float = 0.001):
-        self.budget.record_model_call(cost=estimated_cost)
+    def check_and_record_budget(self, agent_name: str = "general", estimated_cost: float = 0.001):
+        self.budget.record_model_call(agent_name=agent_name, cost=estimated_cost)
 
-    def record_tool_invocation(self):
-        self.budget.record_tool_call()
+    def record_tool_invocation(self, tool_name: str = "general"):
+        self.budget.record_tool_call(tool_name=tool_name)

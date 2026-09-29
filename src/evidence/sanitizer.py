@@ -18,6 +18,8 @@ class EvidenceSanitizer:
         r"system\s+(prompt\s+)?override",
         r"emit\s+english",
         r"ignore\s+the\s+assignment\s+rules",
+        r"disregard\s+(the\s+)?assignment",
+        r"reveal\s+(your\s+)?prompt",
         r"disregard\s+all\s+prior",
         r"output\s+confidence\s+1\.0",
     ]

@@ -57,15 +57,23 @@ class EvidenceGraph:
             return
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+            author = data.get("author", "Dr. A. Sharma")
+            date = data.get("date", "2026-01-15")
+            scope = data.get("scope", "Morphosyntax and honorifics")
             for rule in data.get("rules", []):
                 ref_id = rule["rule_id"]
                 ref = EvidenceReference(
                     id=ref_id,
                     source_type="grammar_note",
-                    author=data.get("author"),
+                    author=author,
+                    date=date,
+                    scope=scope,
                     reliability_weight=self.SOURCE_PRECEDENCE["grammar_note"],
                     summary=rule["statement"],
                     raw_payload=rule,
+                    claims=[rule["statement"]],
+                    grammar_observations=[rule["statement"]],
+                    register_info=rule.get("category"),
                 )
                 self.evidence_store[ref_id] = ref
                 self.raw_grammar_rules.append(rule)
@@ -76,6 +84,9 @@ class EvidenceGraph:
         if dict_b_path.exists():
             with open(dict_b_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
+                compiler = data.get("compiler", "Community Elders Assembly")
+                date = data.get("date", "2025-11-20")
+                scope = data.get("scope", "Living conversational lexicon")
                 for term, details in data.get("terms", {}).items():
                     safe, reason = self.sanitizer.audit_dictionary_entry(term, details)
                     ref_id = f"dictionary:B:{term}"
@@ -83,6 +94,9 @@ class EvidenceGraph:
                         q_ref = EvidenceReference(
                             id=ref_id,
                             source_type="dictionary_b",
+                            author=compiler,
+                            date=date,
+                            scope=scope,
                             reliability_weight=0.0,
                             summary=f"Quarantined: {reason}",
                             raw_payload=details,
@@ -95,10 +109,15 @@ class EvidenceGraph:
                     ref = EvidenceReference(
                         id=ref_id,
                         source_type="dictionary_b",
-                        author=data.get("compiler"),
+                        author=compiler,
+                        date=date,
+                        scope=scope,
                         reliability_weight=self.SOURCE_PRECEDENCE["dictionary_b"],
                         summary=f"{term} -> {details.get('nadi_9')}",
                         raw_payload=details,
+                        terms={term: details.get("nadi_9", "")},
+                        claims=[f"Definition: {details.get('nadi_9')}"],
+                        register_info=details.get("notes"),
                     )
                     self.evidence_store[ref_id] = ref
                     self.lexicon[term.lower()] = {
@@ -115,6 +134,9 @@ class EvidenceGraph:
         if dict_a_path.exists():
             with open(dict_a_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
+                compiler = data.get("compiler", "Vendor Harvester Corp")
+                date = data.get("date", "2024-06-10")
+                scope = data.get("scope", "Automated lexical scrape")
                 for term, details in data.get("terms", {}).items():
                     norm_term = term.lower()
                     safe, reason = self.sanitizer.audit_dictionary_entry(term, details)
@@ -124,6 +146,9 @@ class EvidenceGraph:
                         q_ref = EvidenceReference(
                             id=ref_id,
                             source_type="dictionary_a",
+                            author=compiler,
+                            date=date,
+                            scope=scope,
                             reliability_weight=0.0,
                             summary=f"Quarantined vendor entry: {reason}",
                             raw_payload=details,
@@ -136,10 +161,15 @@ class EvidenceGraph:
                     ref = EvidenceReference(
                         id=ref_id,
                         source_type="dictionary_a",
-                        author=data.get("compiler"),
+                        author=compiler,
+                        date=date,
+                        scope=scope,
                         reliability_weight=self.SOURCE_PRECEDENCE["dictionary_a"],
                         summary=f"{term} -> {details.get('nadi_9')}",
                         raw_payload=details,
+                        terms={term: details.get("nadi_9", "")},
+                        claims=[f"Vendor mapping: {details.get('nadi_9')}"],
+                        register_info=details.get("notes"),
                     )
                     self.evidence_store[ref_id] = ref
 
@@ -176,6 +206,8 @@ class EvidenceGraph:
             return
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+            author = data.get("author", "STAGE Dialect Board")
+            date = data.get("date", "2025-08-01")
             for ex in data.get("examples", []):
                 ref_id = f"example:{ex['id']}"
                 # Flag known legacy flaws
@@ -184,9 +216,13 @@ class EvidenceGraph:
                 ref = EvidenceReference(
                     id=ref_id,
                     source_type="approved_example",
+                    author=author,
+                    date=date,
+                    scope="Corpus benchmark",
                     reliability_weight=weight,
                     summary=f"{ex['source']} -> {ex['target']}",
                     raw_payload=ex,
+                    claims=[f"Translation: {ex['source']} -> {ex['target']}"],
                     quarantined=is_flawed,
                     quarantine_reason="Flagged legacy error in approved examples pack" if is_flawed else None,
                 )
@@ -202,14 +238,19 @@ class EvidenceGraph:
             return
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+            date = data.get("date", "2026-02-10")
             for aud in data.get("interviews", []):
                 ref_id = f"audio:{aud['id']}"
                 ref = EvidenceReference(
                     id=ref_id,
                     source_type="audio_interview",
+                    author=aud.get("speaker", "Native Speaker"),
+                    date=date,
+                    scope="Spoken phonology and dialect register",
                     reliability_weight=self.SOURCE_PRECEDENCE["audio_interview"],
                     summary=f"Native audio discussion on {aud['topic']}",
                     raw_payload=aud,
+                    claims=[aud.get("key_phrase", aud.get("topic", ""))],
                 )
                 self.evidence_store[ref_id] = ref
 
@@ -219,15 +260,19 @@ class EvidenceGraph:
             return
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+            date = data.get("date", "2026-02-14")
             for exp in data.get("experts", []):
                 ref_id = f"expert:{exp['expert_id']}"
                 ref = EvidenceReference(
                     id=ref_id,
                     source_type="expert_note",
                     author=exp["name"],
+                    date=date,
+                    scope="Dialectology analysis",
                     reliability_weight=self.SOURCE_PRECEDENCE["expert_note"],
                     summary=exp["notes"],
                     raw_payload=exp,
+                    claims=[exp["notes"]],
                 )
                 self.evidence_store[ref_id] = ref
 
@@ -237,6 +282,7 @@ class EvidenceGraph:
             return
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
+            date = data.get("date", "2026-03-01")
             for fb in data.get("feedback_items", []):
                 ref_id = f"feedback:{fb['id']}"
                 is_signal = fb.get("valuable_signal", False)
@@ -244,9 +290,12 @@ class EvidenceGraph:
                     id=ref_id,
                     source_type="viewer_feedback",
                     author=fb["user"],
+                    date=date,
+                    scope="Audience perception",
                     reliability_weight=self.SOURCE_PRECEDENCE["viewer_feedback"] if is_signal else 0.05,
                     summary=fb["text"],
                     raw_payload=fb,
+                    claims=[fb["text"]],
                     quarantined=not is_signal,
                     quarantine_reason="Viewer noise / ungrounded opinion" if not is_signal else None,
                 )
